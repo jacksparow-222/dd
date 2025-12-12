@@ -1,5 +1,6 @@
-
+'use client';
 import React from 'react';
+
 export default function LanguageToggle({ onChange }){
   const [lang,setLang]=React.useState('fr');
   const toggle = () => { const n = lang==='fr' ? 'ar' : 'fr'; setLang(n); if(onChange) onChange(n); }
