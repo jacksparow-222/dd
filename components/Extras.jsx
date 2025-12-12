@@ -14,14 +14,12 @@ export function FloatingWhatsApp(){
 export function LanguageWrapper({ children }){
   const [lang,setLang] = React.useState('fr');
   return (
-    <div>
+    <div dir={lang==='ar' ? 'rtl' : 'ltr'}>
       <div className="flex justify-end p-4">
         <button onClick={()=>setLang('fr')} className={`px-3 py-1 rounded ${lang==='fr' ? 'bg-black text-white' : 'bg-gray-200'}`}>FR</button>
         <button onClick={()=>setLang('ar')} className={`ml-2 px-3 py-1 rounded ${lang==='ar' ? 'bg-black text-white' : 'bg-gray-200'}`}>AR</button>
       </div>
-      <div dir={lang==='ar' ? 'rtl' : 'ltr'}>
-        {React.cloneElement(children, { lang })}
-      </div>
+      {children}
     </div>
   )
 }
