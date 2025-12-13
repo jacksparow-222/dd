@@ -10,22 +10,22 @@ export default function Portfolio(){
     {
       name:'Riad des Saveurs', 
       category: 'Restaurant',
-      img:'/mockups/restaurant-landing-01.png', 
-      demo:'/mockups/restaurant-landing-01.png',
+      img:'/mockups/mockup-restaurant-landing-01.png', 
+      demo:'/mockups/mockup-restaurant-landing-01.png',
       description: 'Site élégant avec menu interactif et réservations en ligne'
     },
     {
       name:'Souk Chic', 
       category: 'E-commerce',
-      img:'/mockups/agency-modern-01.png', 
-      demo:'/mockups/agency-modern-01.png',
+      img:'/mockups/mockup-agency-modern-01.png', 
+      demo:'/mockups/mockup-agency-modern-01.png',
       description: 'Boutique moderne avec panier intelligent et paiement sécurisé'
     },
     {
       name:'Pâtisserie Atlas', 
       category: 'Boutique',
-      img:'/mockups/ecommerce-fashion-01.png', 
-      demo:'/mockups/ecommerce-fashion-01.png',
+      img:'/mockups/mockup-ecommerce-fashion-01.png', 
+      demo:'/mockups/mockup-ecommerce-fashion-01.png',
       description: 'Catalogue produits avec galerie haute définition'
     }
   ];
@@ -54,11 +54,20 @@ export default function Portfolio(){
               className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
             >
               {/* Image container */}
-              <div className="relative h-64 overflow-hidden bg-gray-100">
+              <div className="relative h-64 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100">
                 <img 
                   src={it.img} 
                   alt={it.name} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  onError={(e) => {
+                    // Fallback if image doesn't exist
+                    e.target.style.display = 'none';
+                    e.target.parentElement.innerHTML = `
+                      <div class="w-full h-full flex items-center justify-center text-6xl">
+                        ${i === 0 ? '🍽️' : i === 1 ? '🛍️' : '🍰'}
+                      </div>
+                    `;
+                  }}
                 />
                 
                 {/* Overlay on hover */}
