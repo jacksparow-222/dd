@@ -92,7 +92,7 @@ export default function Hero(){
         {/* Premium CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
-            href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP||'+212600000000').replace(/\D/g,'')}`}
+            href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP||'+212710925748').replace(/\D/g,'')}`}
             className="group px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-xl font-semibold text-lg shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/40 transform hover:-translate-y-1 transition-all duration-300"
           >
             <span className="flex items-center gap-2">
