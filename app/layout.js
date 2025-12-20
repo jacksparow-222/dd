@@ -1,74 +1,41 @@
 import './globals.css'
 
 export const metadata = {
-  // PRIMARY SEO - CRITICAL FOR GOOGLE
   title: 'Création Site Web Oujda | Développeur Web Oriental | Oujda Digital Studio',
   description: 'Création site web professionnel à Oujda. Site vitrine, e-commerce, marketing digital. Livraison 5-7 jours. Prix: 2,999 DH. Service local Oriental. WhatsApp: +212710925748',
   
-  // KEYWORDS
-  keywords: 'création site web oujda, développeur web oujda, agence web oriental, site internet oujda, e-commerce maroc, site vitrine oujda, développement web berkane, référencement oujda, marketing digital oriental, freelance web oujda, site restaurant oujda, boutique en ligne maroc',
-  
-  // AUTHOR & CONTACT
-  authors: [{ name: 'Oujda Digital Studio' }],
-  creator: 'Oujda Digital Studio',
-  publisher: 'Oujda Digital Studio',
-  verification: {
-    google: "JdmunYkh8JO98lPqy1R-dqi3y1u-O_ifqxKhF2yyCvU",
+  // FAVICON CONFIGURATION - CORRECT PATHS
+  icons: {
+    icon: [
+      { url: '/logo/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo/favicon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/logo/logo.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   
-  // ROBOTS
+  keywords: 'création site web oujda, développeur web oujda, agence web oriental, site internet oujda, e-commerce maroc...',
+  
+  authors: [{ name: 'Oujda Digital Studio' }],
+  creator: 'Oujda Digital Studio',
+  
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   
-  // OPEN GRAPH (Facebook, LinkedIn)
   openGraph: {
     type: 'website',
     locale: 'fr_MA',
     url: 'https://oujdadigital.vercel.app',
     siteName: 'Oujda Digital Studio',
     title: 'Oujda Digital Studio - Création Site Web Professionnel Oujda',
-    description: 'Site web professionnel en 5-7 jours. À partir de 2,999 DH. Service local Oujda & Oriental.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Oujda Digital Studio',
-      },
-    ],
+    description: 'Site web professionnel en 5-7 jours. À partir de 2,999 DH.',
   },
   
-  // TWITTER CARD
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Création Site Web Oujda - Oujda Digital Studio',
-    description: 'Site professionnel en 5-7 jours. 2,999 DH. Oujda & Oriental.',
-    images: ['/og-image.jpg'],
-  },
-   
-  // CANONICAL URL
   alternates: {
     canonical: 'https://oujdadigital.vercel.app',
-  },
-  
-  // ADDITIONAL META
-  other: {
-    'geo.region': 'MA-60',
-    'geo.placename': 'Oujda',
-    'geo.position': '34.6814;-1.9086',
-    'ICBM': '34.6814, -1.9086',
-    'contact': 'smail.al.harrak@gmail.com',
-    'telephone': '+212710925748',
-    'coverage': 'Oujda, Berkane, Nador, Jerada, Taourirt, Maroc Oriental',
   },
 }
 
@@ -76,7 +43,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <head>
-        {/* Additional head elements if needed */}
+        {/* Explicit favicon links with CORRECT paths */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo.png" />
+        <link rel="shortcut icon" href="/logo/favicon.png" />
       </head>
       <body suppressHydrationWarning>
         {children}
