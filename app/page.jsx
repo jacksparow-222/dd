@@ -8,6 +8,7 @@ import Contact from '../components/Contact'
 import { FloatingWhatsApp, LanguageWrapper } from '../components/Extras'
 import SEOContent from '../components/SEOContent'
 import LocationsSection from '../components/LocationsSection'
+import CloudBackground from '../components/CloudBackground'
 
 export default function Page() {
   // STRUCTURED DATA FOR GOOGLE (JSON-LD)
@@ -84,6 +85,7 @@ export default function Page() {
         <LanguageWrapper>
       <Navbar />
       <FloatingWhatsApp />
+           <CloudBackground />
       
       <main>
         <Hero />
