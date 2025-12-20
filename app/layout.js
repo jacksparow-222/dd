@@ -12,6 +12,9 @@ export const metadata = {
   authors: [{ name: 'Oujda Digital Studio' }],
   creator: 'Oujda Digital Studio',
   publisher: 'Oujda Digital Studio',
+  verification: {
+    google: "JdmunYkh8JO98lPqy1R-dqi3y1u-O_ifqxKhF2yyCvU",
+  }
   
   // ROBOTS
   robots: {
