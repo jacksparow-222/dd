@@ -39,15 +39,36 @@ export const metadata = {
   },
 }
 
+import './globals.css'
+
+export const metadata = {
+  title: 'Création Site Web Oujda | Développeur Web Oriental | Oujda Digital Studio',
+  description: 'Création site web professionnel à Oujda...',
+  // ... your existing metadata
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <head>
-        {/* Explicit favicon links with CORRECT paths */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo.png" />
-        <link rel="shortcut icon" href="/logo/favicon.png" />
+        {/* PRELOAD CRITICAL FONTS */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          as="style"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        />
+        
+        {/* Favicon links */}
+        <link rel="icon" type="image/png" href="/logo/favicon.png" />
+        <link rel="apple-touch-icon" href="/logo/logo.png" />
+        
+        {/* DNS PREFETCH for faster loading */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
       </head>
       <body suppressHydrationWarning>
         {children}
