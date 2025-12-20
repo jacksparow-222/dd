@@ -7,7 +7,7 @@ import Testimonials from '../components/Testimonials'
 import Contact from '../components/Contact'
 import { FloatingWhatsApp, LanguageWrapper } from '../components/Extras'
 import SEOContent from '../components/SEOContent'
-import LocationsSection from '../components/LocationsSection'
+import LocationsSection from '../components/LocationsSection'  // Note: This is imported but not used in the JSX. If not needed, remove the import.
 import CloudBackground from '../components/CloudBackground'
 
 export default function Page() {
@@ -82,10 +82,18 @@ export default function Page() {
   };
 
   return (
-        <LanguageWrapper>
+    <LanguageWrapper>
+      {/* Add structured data script for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      
       <Navbar />
       <FloatingWhatsApp />
-           <CloudBackground />
+      <CloudBackground />
       
       <main>
         <Hero />
@@ -109,8 +117,6 @@ export default function Page() {
         <section id="contact">
           <Contact />
         </section>
-      </main>
-    </LanguageWrapper>
         
         {/* SEO CONTENT SECTION - CRITICAL FOR RANKING */}
         <SEOContent />
