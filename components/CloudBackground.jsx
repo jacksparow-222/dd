@@ -36,6 +36,7 @@ export default function CloudBackground() {
           height: 100%;
           top: 0;
           left: 0;
+          will-change: transform; /* Optimize for performance */
         }
         
         .cloud {
@@ -43,6 +44,7 @@ export default function CloudBackground() {
           background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
           border-radius: 100px;
           filter: blur(40px);
+          backface-visibility: hidden; /* Prevent flickering */
         }
         
         /* Cloud sizes and positions */
@@ -102,56 +104,7 @@ export default function CloudBackground() {
           left: 80%;
         }
         
-        /* Animations - Parallax scroll effect */
-        @keyframes float-slow {
-          0% {
-            transform: translateX(0) translateY(0);
-          }
-          50% {
-            transform: translateX(-20px) translateY(-10px);
-          }
-          100% {
-            transform: translateX(0) translateY(0);
-          }
-        }
-        
-        @keyframes float-medium {
-          0% {
-            transform: translateX(0) translateY(0);
-          }
-          50% {
-            transform: translateX(-30px) translateY(-15px);
-          }
-          100% {
-            transform: translateX(0) translateY(0);
-          }
-        }
-        
-        @keyframes float-fast {
-          0% {
-            transform: translateX(0) translateY(0);
-          }
-          50% {
-            transform: translateX(-40px) translateY(-20px);
-          }
-          100% {
-            transform: translateX(0) translateY(0);
-          }
-        }
-        
-        .cloud-slow {
-          animation: float-slow 30s ease-in-out infinite;
-        }
-        
-        .cloud-medium {
-          animation: float-medium 20s ease-in-out infinite;
-        }
-        
-        .cloud-fast {
-          animation: float-fast 15s ease-in-out infinite;
-        }
-        
-        /* Responsive - reduce on mobile */
+        /* Responsive - reduce on mobile for better performance */
         @media (max-width: 768px) {
           .cloud {
             filter: blur(20px);
