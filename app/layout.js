@@ -54,14 +54,7 @@ export const metadata = {
     description: 'Site professionnel en 5-7 jours. 2,999 DH. Oujda & Oriental.',
     images: ['/og-image.jpg'],
   },
-  
-  // VERIFICATION (Add these when you get them)
-  verification: {
-    google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification',
-    // bing: 'your-bing-verification',
-  },
-  
+   
   // CANONICAL URL
   alternates: {
     canonical: 'https://oujdadigital.vercel.app',
