@@ -15,7 +15,7 @@ export const metadata = {
     ],
   },
   
-  keywords: 'création site web oujda, développeur web oujda, agence web oriental, site internet oujda, e-commerce maroc...',
+  keywords: 'création site web oujda, développeur web oujda, agence web oriental, site internet oujda, e-commerce maroc, marketing digital oriental, développeur freelance maroc, site vitrine professionnel, boutique en ligne berkane, seo oujda, référencement local maroc',
   
   authors: [{ name: 'Oujda Digital Studio' }],
   creator: 'Oujda Digital Studio',
@@ -32,19 +32,27 @@ export const metadata = {
     siteName: 'Oujda Digital Studio',
     title: 'Oujda Digital Studio - Création Site Web Professionnel Oujda',
     description: 'Site web professionnel en 5-7 jours. À partir de 2,999 DH.',
+    images: [
+      {
+        url: '/logo/logo.png', // Replace with actual OG image path if available
+        width: 1200,
+        height: 630,
+        alt: 'Oujda Digital Studio - Création Site Web Oujda',
+      },
+    ],
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    site: '@OujdaDigital', // Replace with actual Twitter handle if available
+    title: 'Oujda Digital Studio - Création Site Web Professionnel Oujda',
+    description: 'Site web professionnel en 5-7 jours. À partir de 2,999 DH.',
+    images: ['/logo/logo.png'], // Replace with actual image path
   },
   
   alternates: {
     canonical: 'https://oujdadigital.vercel.app',
   },
-}
-
-import './globals.css'
-
-export const metadata = {
-  title: 'Création Site Web Oujda | Développeur Web Oriental | Oujda Digital Studio',
-  description: 'Création site web professionnel à Oujda...',
-  // ... your existing metadata
 }
 
 export default function RootLayout({ children }) {
@@ -62,7 +70,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         />
         
-        {/* Favicon links */}
+        {/* Favicon links (redundant with metadata, but kept for compatibility) */}
         <link rel="icon" type="image/png" href="/logo/favicon.png" />
         <link rel="apple-touch-icon" href="/logo/logo.png" />
         
