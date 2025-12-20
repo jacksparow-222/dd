@@ -32,9 +32,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-              <span className="text-2xl font-bold text-white">O</span>
-            </div>
+            <div className="relative w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 overflow-hidden">
+ <img 
+    src="/logo/logo.png" 
+    alt="Oujda Digital Studio" 
+    className="w-full h-full object-contain p-2"
+    onError={(e) => {
+      e.target.style.display = 'none';
+      e.target.parentElement.innerHTML = '<span class="text-2xl font-bold text-white">O</span>';
+    }}
+  />
+</div>
             <div className="transition-colors duration-300">
               <div className="font-bold text-lg leading-tight text-slate-900">Oujda Digital</div>
               <div className="text-xs text-amber-600 font-medium">Premium Studio</div>
