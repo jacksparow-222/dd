@@ -81,13 +81,7 @@ export default function Page() {
   };
 
   return (
-    <LanguageWrapper>
-      {/* STRUCTURED DATA - CRITICAL FOR SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      
+        <LanguageWrapper>
       <Navbar />
       <FloatingWhatsApp />
       
@@ -106,9 +100,6 @@ export default function Page() {
           <Pricing />
         </section>
         
-        {/* LOCATIONS SECTION - SEO BOOST */}
-        <LocationsSection />
-        
         <section id="testimonials">
           <Testimonials />
         </section>
@@ -116,6 +107,8 @@ export default function Page() {
         <section id="contact">
           <Contact />
         </section>
+      </main>
+    </LanguageWrapper>
         
         {/* SEO CONTENT SECTION - CRITICAL FOR RANKING */}
         <SEOContent />
