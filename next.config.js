@@ -19,13 +19,12 @@ const nextConfig = {
   // COMPRESSION
   compress: true,
   
-  // EXPERIMENTAL FEATURES FOR SPEED
+  // EXPERIMENTAL FEATURES - REMOVED optimizeCss (causes critters error)
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
   
-  // POWEREDBY HEADER REMOVAL
+  // REMOVE POWERED BY HEADER
   poweredByHeader: false,
 };
 
